@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.edu.uninorte.databindinexample.Main2Activity">
+    <data>
+        <variable name="xlist" type="co.edu.uninorte.databindinexample.PersonMain"></variable>
+        <variable name="person" type="co.edu.uninorte.databindinexample.Person"></variable>
+        <variable name="obj" type="co.edu.uninorte.databindinexample.Person"></variable>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mylist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:items="@{xlist.list}"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:onClick="click"
+            android:text="LALA">
+
+
+        </Button>
+    </RelativeLayout>
+
+
+</layout>
