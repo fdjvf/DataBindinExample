@@ -12,10 +12,18 @@ import android.widget.ListView;
 
 public class BindingHelper {
 
+    //Version para RecycleView
     @BindingAdapter("bind:items")
     public static void bindList(RecyclerView view, ObservableArrayList<Person> list) {
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         view.setLayoutManager(layoutManager);
         view.setAdapter(new ListAdapter(list));
     }
+    /* Version para ListView
+    @BindingAdapter("bind:items")
+    public  static void bindList(ListView view, ObservableArrayList<Person> list) {
+        ListAdapter adapter = new ListAdapter(list);
+        view.setAdapter(adapter);
+    }*/
+
 }
